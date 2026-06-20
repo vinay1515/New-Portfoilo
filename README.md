@@ -198,6 +198,16 @@ npx -y serve .
 
 ---
 
+## 🛠️ Recent Changes
+
+- **404 page redesign**: added animated server rack background, anime disconnect wires, glitch `404` number, status badge, diagnostic card, terminal log, scrolling ticker, and improved accessibility.
+- **ARIA fixes**: removed invalid `aria-label` on `<div>`, added appropriate roles (`group`, `region`), replaced decorative `<div>` with `<section>` for system logs.
+- **CSS cleanup**: removed empty rule set, refined class names, added utility classes for new components.
+- **HTML structure**: replaced `<div role="region">` with native `<section>` element for better semantics.
+- **Git history**: committed all changes with descriptive messages.
+
+---
+
 ## 📜 License
 
 This project is personal and not licensed for redistribution. Feel free to use it as inspiration for your own portfolio.
