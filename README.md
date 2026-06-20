@@ -16,9 +16,9 @@
 
 ## 📁 Project Structure
 
-```
 New Portfolio/
 ├── 📄 index.html          # Main HTML document (all sections)
+├── 📄 404.html            # Custom server-fault themed 404 error page
 ├── 🎨 tailwind.css        # Custom CSS — animations, hover effects, print styles
 ├── ⚙️  script.js           # JavaScript — theme toggle, modal, form, clipboard
 ├── 📂 Assets/
@@ -111,6 +111,13 @@ This portfolio was built to:
 - Submit button shows **"Sending…"** state while request is in flight
 - ✅ On success: form fields hidden, animated thank-you card appears, auto-scrolls into view
 - ❌ On error: error banner with direct email fallback link
+
+### 🔌 Custom 404 Error Page (`404.html`)
+- **Cloud-infrastructure themed** anime wire disconnection scene
+- Animated server racks with blinking status LEDs
+- **Terminal incident log** demonstrating `ping`, `curl`, `kubectl`, and `terraform` commands
+- Scrolling NOC-style ticker tape and diagnostic metric cards
+- Fully responsive and styled without external CSS files (Tailwind CDN + custom inline `<style>`)
 
 ---
 
