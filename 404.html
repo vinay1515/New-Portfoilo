@@ -315,7 +315,6 @@
       display: flex; align-items: center; justify-content: center;
     }
     .error-icon-wrap svg { color: #F87171; }
-    .error-title-group {}
     .error-code-label {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.68rem; color: #F87171; letter-spacing: 0.08em; font-weight: 700;
@@ -576,7 +575,7 @@
 
       <!-- ── 404 Glitch Number ── -->
       <div class="num-block">
-        <div class="num-404" aria-label="404">404</div>
+        <div class="num-404">404</div>
       </div>
 
       <!-- ── Status row ── -->
@@ -610,7 +609,7 @@
         </p>
 
         <!-- Diagnostic metrics -->
-        <div class="diag-grid" aria-label="Diagnostic metrics">
+        <div class="diag-grid" role="group" aria-label="Diagnostic metrics">
           <div class="diag-cell">
             <p class="diag-label">HTTP Code</p>
             <p class="diag-value val-red">404</p>
@@ -639,7 +638,7 @@
       </section>
 
       <!-- ── Terminal Log ── -->
-      <div class="terminal-wrap" aria-label="System logs">
+      <section class="terminal-wrap" aria-label="System logs">
         <div class="terminal">
           <div class="terminal-bar">
             <span class="t-dot t-dot-r"></span>
@@ -663,7 +662,7 @@
             <p><span class="t-prompt">$ </span><span class="t-ok t-cursor">Initiating auto-remediation — redirecting to home</span></p>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- ── Buttons ── -->
       <div class="actions">
