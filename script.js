@@ -197,7 +197,13 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     formSuccess.classList.add('hidden');
+    formSuccess.classList.remove('flex');
     formError.classList.add('hidden');
+
+    // Disable submit button while sending
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
 
     const formData = new FormData(form);
     const data = {
@@ -219,13 +225,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (response.ok) {
+        // Hide the form fields and show the thank-you card
+        form.querySelectorAll(':scope > *:not(#form-success):not(#form-error)').forEach(el => el.classList.add('hidden'));
         formSuccess.classList.remove('hidden');
+        formSuccess.classList.add('flex');
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
         form.reset();
       } else {
         formError.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
       }
     } catch (err) {
       formError.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
     }
   });
 

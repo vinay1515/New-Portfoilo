@@ -610,9 +610,7 @@
             class="hidden ml-2 text-xs text-green-600 font-bold bg-green-100 px-2 py-1 rounded">Copied!</span>
         </div>
 
-        <!-- Formspree Form -->
-        <!-- [REPLACE the action URL with your actual Formspree form ID] -->
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST"
+        <form id="contact-form" action="https://formspree.io/f/xlgyrrvd" method="POST"
           class="space-y-6 relative z-10 max-w-2xl mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -648,13 +646,24 @@
             Send Message
           </button>
 
+          <!-- Thank-you card shown after successful submission -->
           <div id="form-success"
-            class="hidden p-4 bg-green-50 border-l-4 border-green-500 text-green-700 rounded shadow-sm text-sm font-semibold">
-            Message sent successfully! I'll get back to you soon.
+            class="hidden flex-col items-center text-center gap-4 p-8 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-2xl shadow-md">
+            <div class="w-16 h-16 bg-green-100 dark:bg-green-800/40 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-extrabold text-green-700 dark:text-green-400">Thank you for reaching out! 🎉</h3>
+            <p class="text-slate-600 dark:text-slate-300 font-medium">Your message has been received. I'll get back to you as soon as possible — usually within 24&nbsp;hours.</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400">In the meantime, feel free to connect with me on
+              <a href="https://www.linkedin.com/in/vinay-kumar-duvva/" target="_blank" rel="noopener noreferrer" class="text-blue font-bold hover:underline">LinkedIn</a>.
+            </p>
           </div>
           <div id="form-error"
-            class="hidden p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded shadow-sm text-sm font-semibold">
-            Oops! There was a problem submitting your form. Please try again.
+            class="hidden p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 text-red-700 dark:text-red-400 rounded shadow-sm text-sm font-semibold">
+            Oops! There was a problem submitting your form. Please try again or email me directly at
+            <a href="mailto:duvvavinaykumar@gmail.com" class="underline">duvvavinaykumar@gmail.com</a>.
           </div>
         </form>
       </div>
