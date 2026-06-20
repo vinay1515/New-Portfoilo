@@ -118,3 +118,11 @@ dialog::backdrop {
 .animate-image-fade-in {
   animation: imageFadeIn 1s ease-out 0.3s forwards;
 }
+
+/* Animation delay utilities (replaces inline style="animation-delay:...") */
+.anim-delay-1 { animation-delay: 0.1s; }
+.anim-delay-2 { animation-delay: 0.2s; }
+.anim-delay-3 { animation-delay: 0.3s; }
+.anim-delay-4 { animation-delay: 0.4s; }
+.anim-delay-5 { animation-delay: 0.5s; }
+.anim-delay-6 { animation-delay: 0.6s; }
