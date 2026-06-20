@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Effects and Hover Transitions 
+   (Converted to pure CSS to remove the @apply error and support the CDN) */
+.hover-card-effect {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-card-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 10px 10px -5px rgba(37, 99, 235, 0.04);
+  border-color: #93c5fd;
+  /* Tailwind blue-300 */
+}
+
+/* Dark mode hover color */
+.dark .hover-card-effect:hover {
+  border-color: #1e3a8a;
+  /* Tailwind blue-900 */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Native Dialog Modal Styling */
+dialog::backdrop {
+  background: rgba(10, 25, 47, 0.7);
+  /* Navy tint blur */
+  backdrop-filter: blur(8px);
+}
+
+/* Print Friendly Overrides */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .print-hidden,
+  header,
+  dialog {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 2rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* Force links to expand so recruiter can read them when printed */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #4a5568;
+  }
+}
+
+/* Custom animation for hero image fade-in */
+@keyframes imageFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-image-fade-in {
+  animation: imageFadeIn 1s ease-out 0.3s forwards;
+}

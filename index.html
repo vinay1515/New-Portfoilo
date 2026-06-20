@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinay Kumar Duvva | Cloud Support Engineer</title>
+  <meta name="description" content="Portfolio of Vinay Kumar Duvva, a Cloud and Technical Support Engineer certified in AWS, Azure, and GCP." />
+  
+  <script>
+    // Theme Initialization
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Config Custom Colors -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            blue: {
+              DEFAULT: '#2563EB', // Professional Blue
+              light: '#60A5FA',
+              dark: '#1D4ED8',
+            },
+            navy: {
+              DEFAULT: '#0A192F', // Deep Navy Blue for Dark Bg
+              card: '#112240',    // Slightly lighter for dark cards
+            },
+            black: {
+              DEFAULT: '#0F172A', // Slate 900 for soft black text
+              pure: '#000000',
+            },
+            white: {
+              DEFAULT: '#FFFFFF',
+              off: '#F8FAFC', // Slate 50 for light backgrounds
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="tailwind.css" />
+</head>
+<body class="bg-white-off text-black dark:bg-navy dark:text-white transition-colors duration-300 selection:bg-blue selection:text-white">
+
+  <!-- Glassy Fixed Navigation -->
+  <header class="fixed top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-navy/80 border-b border-slate-200 dark:border-slate-800 shadow-sm print-hidden transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <a href="#" class="text-xl font-bold tracking-wider text-black dark:text-white hover:text-blue dark:hover:text-blue-light transition-colors">
+            V<span class="text-blue">KD</span>
+          </a>
+        </div>
+        
+        <nav class="hidden md:flex space-x-8">
+          <a href="#about" class="text-sm font-semibold hover:text-blue transition-colors">About</a>
+          <a href="#skills" class="text-sm font-semibold hover:text-blue transition-colors">Skills</a>
+          <a href="#experience" class="text-sm font-semibold hover:text-blue transition-colors">Experience</a>
+          <a href="#education" class="text-sm font-semibold hover:text-blue transition-colors">Education</a>
+          <a href="#projects" class="text-sm font-semibold hover:text-blue transition-colors">Projects</a>
+        </nav>
+
+        <div class="hidden md:flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-full bg-slate-200 dark:bg-navy-card text-black dark:text-yellow-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition focus:outline-none focus:ring-2 focus:ring-blue" aria-label="Toggle Dark Mode">
+            <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
+          </button>
+          <!-- [REPLACE href with the actual path to your resume file when hosted] -->
+          <a href="Assets/Vinay_Kumar_Duvva_Cloud_Support.pdf" download class="px-5 py-2 text-sm font-bold rounded bg-blue text-white hover:bg-blue-dark transition-all shadow-md hover:shadow-blue/50 focus:outline-none focus:ring-2 focus:ring-blue">
+            Download Resume
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 text-black dark:text-white focus:outline-none rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-navy-card border-b border-slate-200 dark:border-slate-800 absolute w-full shadow-lg">
+      <div class="px-4 pt-2 pb-4 space-y-2 flex flex-col">
+        <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+        <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a>
+        <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a>
+        <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Education</a>
+        <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
+        <button id="theme-toggle-mobile" class="w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 text-blue font-bold">Toggle Dark Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24">
+    
+    <!-- HERO SECTION -->
+    <section class="py-12 md:py-20 flex flex-col-reverse md:flex-row items-center gap-12">
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 animate-fade-in-up" style="animation-delay: 0.1s;">
+          Hi, I'm <span class="text-blue">Vinay Kumar</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 font-bold mb-4 animate-fade-in-up" style="animation-delay: 0.2s;">
+          Cloud & Technical Support Engineer
+        </p>
+        <p class="text-sm md:text-base text-blue font-bold mb-6 animate-fade-in-up bg-blue/10 inline-block px-4 py-2 rounded-lg" style="animation-delay: 0.3s;">
+          🚀 Aspiring Cloud Support Engineer | 🔖 2x Certified In AWS, GCP & Azure | 🧩 Enhancing system reliability
+        </p>
+        <p class="text-base text-slate-600 dark:text-slate-400 mb-6 max-w-2xl leading-relaxed animate-fade-in-up" style="animation-delay: 0.4s;">
+          I focus on troubleshooting infrastructure issues, improving reliability, automating deployments, and supporting business-critical environments. Certified across AWS, Google Cloud, and Microsoft Azure, with practical experience in cloud operations, networking, and monitoring.
+        </p>
+        
+        <div class="mt-4 space-y-3 text-slate-700 dark:text-slate-300 font-medium animate-fade-in-up text-left max-w-2xl mx-auto md:mx-0" style="animation-delay: 0.5s;">
+          <p class="flex items-start"><span class="mr-3 text-blue text-xl">🔹</span> Designing and developing responsive, high-performance web applications.</p>
+          <p class="flex items-start"><span class="mr-3 text-blue text-xl">🔹</span> Building, automating, and securing cloud-native infrastructure using IaC.</p>
+          <p class="flex items-start"><span class="mr-3 text-blue text-xl">🔹</span> Committed to delivering end-to-end solutions that are user-centric and highly available.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-10 print-hidden animate-fade-in-up" style="animation-delay: 0.6s;">
+          <a href="#contact" class="px-8 py-3 bg-blue text-white font-bold rounded-lg shadow-lg hover:bg-blue-dark hover:shadow-blue/50 hover:-translate-y-1 transition-all duration-300">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+      
+      <!-- Profile Image -->
+      <div class="flex-shrink-0 relative group print-hidden animate-fade-in-up" style="animation-delay: 0.3s;">
+        <div class="absolute -inset-4 bg-gradient-to-r from-blue to-blue-light rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+        <!-- [REPLACE src with your actual profile picture path] -->
+        <img src="Assets/My_Photo.jpg" alt="Vinay Kumar Duvva" class="relative w-56 h-56 md:w-72 md:h-72 rounded-full object-cover border-4 border-white dark:border-navy-card shadow-2xl animate-float" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 scroll-mt-20">
+      <div class="bg-white dark:bg-navy-card p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-2 h-full bg-blue"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-black dark:text-white flex items-center">
+              <svg class="w-6 h-6 mr-2 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              What I Do Best
+            </h3>
+            <ul class="space-y-4 text-slate-600 dark:text-slate-300">
+              <li><strong class="text-black dark:text-white">Cloud Infrastructure:</strong> AWS, GCP, Azure for secure, scalable deployments.</li>
+              <li><strong class="text-black dark:text-white">IaC & Containers:</strong> Terraform, Helm charts, CloudFormation, Docker, Kubernetes.</li>
+              <li><strong class="text-black dark:text-white">Monitoring:</strong> Stackdriver, Prometheus, Grafana, ELK Stack.</li>
+              <li><strong class="text-black dark:text-white">Networking:</strong> VPC, Subnetting, Routing, DNS, VPN, Firewalls, NSGs.</li>
+              <li><strong class="text-black dark:text-white">OS & Scripting:</strong> Linux, Windows Server, Python, Bash/Shell.</li>
+              <li><strong class="text-black dark:text-white">Web Development:</strong> HTML5, CSS3, JavaScript, React for responsive UIs.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-black dark:text-white flex items-center">
+              <svg class="w-6 h-6 mr-2 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+              My Value to Teams
+            </h3>
+            <p class="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+              I merge cloud engineering skills with UI development know-how, allowing me to deliver solutions that are both technically robust and end-user focused. Whether it’s migrating workloads to the cloud, automating deployments, or building web interfaces connected to cloud services, I deliver results with scalability, security, and reliability in mind.
+            </p>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed font-semibold">
+              I am actively exploring Cloud Support, Technical Support, and Junior Cloud Engineer opportunities where I can contribute strong troubleshooting skills, cloud platform knowledge, and an ownership mindset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-16 scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-10 text-black dark:text-white flex items-center">
+        <span class="w-8 h-1 bg-blue mr-4"></span> Technical Skills
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black">
+          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2">Cloud & IaC</h3>
+          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
+            <span class="py-1">AWS (EC2, S3, VPC, IAM)</span>
+            <span class="py-1">Azure (VNets, NSGs, VPN)</span>
+            <span class="py-1">Google Cloud Platform</span>
+            <span class="py-1">Terraform</span>
+            <span class="py-1">CloudFormation</span>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black">
+          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2">Containers & CI/CD</h3>
+          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
+            <span class="py-1">Docker</span>
+            <span class="py-1">Kubernetes (GKE)</span>
+            <span class="py-1">Helm Charts</span>
+            <span class="py-1">Git & GitHub Actions</span>
+            <span class="py-1">Jenkins</span>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black">
+          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2">Networking & Monitor</h3>
+          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
+            <span class="py-1">VPC, Subnetting, Routing</span>
+            <span class="py-1">DNS, VPN, Firewalls</span>
+            <span class="py-1">Stackdriver</span>
+            <span class="py-1">Prometheus & Grafana</span>
+            <span class="py-1">ELK Stack</span>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black">
+          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2">OS & Development</h3>
+          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
+            <span class="py-1">Linux & Windows Server</span>
+            <span class="py-1">Python</span>
+            <span class="py-1">Bash / Shell Scripting</span>
+            <span class="py-1">HTML5, CSS3, JavaScript</span>
+            <span class="py-1">React UIs</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-16 scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-10 text-black dark:text-white flex items-center">
+        <span class="w-8 h-1 bg-blue mr-4"></span> Professional Experience
+      </h2>
+      <div class="bg-white dark:bg-navy-card p-8 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 hover-card-effect print:border-black">
+        
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-black dark:text-white mb-1">Senior Process Executive – Digital Content Services</h3>
+            <p class="text-lg text-blue font-bold mb-2">Cognizant Technology Solutions (Google gTech CF Snippets)</p>
+          </div>
+          <time class="px-4 py-1 bg-blue/10 text-blue font-bold rounded-full text-sm self-start mt-2 md:mt-0 whitespace-nowrap">May 2024 – Jun 2026</time>
+        </div>
+
+        <div class="mb-6 p-4 bg-slate-50 dark:bg-navy rounded-lg border-l-4 border-blue text-slate-700 dark:text-slate-300 italic">
+          "Consistently exceeded delivery targets with 118.26% productivity, 103.47% utilization, and a sustained 99.9% quality score while managing high-volume workloads under strict turnaround expectations."
+        </div>
+
+        <ul class="list-disc pl-5 space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>Maintained a 99.9% quality across complex data curation & extraction workflows supporting high-volume tasks for US-based clients.</li>
+          <li>Resolved 50+ ad hoc BigQuery (BQ) support requests alongside core responsibilities without escalation.</li>
+          <li>Completed all data output batches within a 74.55% TAT, meeting strict delivery SLAs across high-volume workloads.</li>
+          <li>Mentored 10+ new associates and drove cross-training initiatives, contributing to a 30% improvement in team throughput.</li>
+          <li>Authored and maintained process documentation and SOPs to reduce onboarding time and standardize team practices.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-16 scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-10 text-black dark:text-white flex items-center">
+        <span class="w-8 h-1 bg-blue mr-4"></span> Education
+      </h2>
+      <div class="bg-white dark:bg-navy-card p-8 rounded-2xl shadow-md border border-slate-200 dark:border-slate-800 hover-card-effect print:border-black relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-5 dark:opacity-10 pointer-events-none">
+          <svg class="w-64 h-64 text-black dark:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-black dark:text-white mb-2 relative z-10">Bachelor of Technology, Electronics & Communication Engineering</h3>
+        <p class="text-lg text-blue font-bold mb-4 relative z-10">Sri Indu Institute of Engineering and Technology, Hyderabad</p>
+        
+        <div class="flex items-center gap-4 relative z-10">
+          <span class="flex items-center text-slate-600 dark:text-slate-400 font-medium">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            Aug 2019 – Jul 2023
+          </span>
+          <span class="px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full font-bold text-sm">
+            GPA: 7.06
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-16 scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-10 text-black dark:text-white flex items-center">
+        <span class="w-8 h-1 bg-blue mr-4"></span> Technical Projects
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1: AWS -->
+        <div class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid">
+          <div class="h-2 w-full bg-orange-500"></div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue transition-colors">AWS Cloud Infrastructure Deployment</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">Dec 2025 – Jun 2026</p>
+            <p class="text-slate-600 dark:text-slate-300 mb-6 flex-grow text-sm">End-to-end AWS infrastructure deployment utilizing S3, CloudFront, EC2, and IAM. Implemented strict security boundaries, lifecycle policies, and disaster recovery replication.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">AWS IAM</span>
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">S3 & CloudFront</span>
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">EC2</span>
+            </div>
+            <div class="mt-auto flex flex-col gap-3">
+              <button class="open-modal-btn w-full px-4 py-2 bg-blue/10 text-blue font-bold rounded hover:bg-blue hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue print-hidden" data-project="aws-infra">View Architecture Details</button>
+              
+              <!-- Direct GitHub Link -->
+              <a href="https://github.com/vinay1515/Vinay_kumar_AWS_Beginner_level_projects" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full px-4 py-2 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors focus:outline-none print-hidden">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Azure -->
+        <div class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid">
+          <div class="h-2 w-full bg-blue-light"></div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue transition-colors">Multi-Region Azure VNet Deployment</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">Mar 2025</p>
+            <p class="text-slate-600 dark:text-slate-300 mb-6 flex-grow text-sm">Designed a 3-region VNet architecture covering East US, West Europe, and Southeast Asia featuring VPN for hybrid connectivity and segmented subnets.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">Azure VNet</span>
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">VPN & NSGs</span>
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">Routing</span>
+            </div>
+            <div class="mt-auto flex flex-col gap-3">
+              <button class="open-modal-btn w-full px-4 py-2 bg-blue/10 text-blue font-bold rounded hover:bg-blue hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue print-hidden" data-project="azure-vnet">View Architecture Details</button>
+              
+              <!-- Direct Video Link -->
+              <a href="https://www.linkedin.com/posts/vinay-kumar-duvva_azure-cloudnetworking-networking-activity-7306592741407211521-FRkI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADytoGQBxbbDoyPVesNycFwpZLTIu2Y2Y_Q" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full px-4 py-2 border border-red-500/30 text-red-600 dark:text-red-400 font-bold rounded hover:bg-red-50 dark:hover:bg-red-500/10 transition-colors focus:outline-none print-hidden">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                Watch Video
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: GCP -->
+        <div class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid">
+          <div class="h-2 w-full bg-green-500"></div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue transition-colors">GCP VPC & Kubernetes Cluster</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">May 2025</p>
+            <p class="text-slate-600 dark:text-slate-300 mb-6 flex-grow text-sm">Provisioned and monitored a production GKE cluster on GCP using Terraform, cutting deployment time by 40%. Configured Stackdriver alerting.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">GCP VPC</span>
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">GKE</span>
+              <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-navy text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700 font-semibold">Terraform</span>
+            </div>
+            <div class="mt-auto flex flex-col gap-3">
+              <button class="open-modal-btn w-full px-4 py-2 bg-blue/10 text-blue font-bold rounded hover:bg-blue hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue print-hidden" data-project="gcp-gke">View Architecture Details</button>
+              
+              <!-- Direct Certificate Link -->
+              <a href="https://www.credly.com/badges/77de8248-cc33-4e05-a9cb-ba4602a31585/public_url" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full px-4 py-2 border border-green-500/30 text-green-600 dark:text-green-400 font-bold rounded hover:bg-green-50 dark:hover:bg-green-500/10 transition-colors focus:outline-none print-hidden">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="py-16">
+      <h2 class="text-3xl font-bold mb-10 text-black dark:text-white flex items-center">
+        <span class="w-8 h-1 bg-blue mr-4"></span> Certifications
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- AWS Certified Solutions Architect -->
+        <a href="https://www.credly.com/badges/79b9f340-476d-4efd-a17a-8f48ec1b41f3/public_url" target="_blank" rel="noopener noreferrer" class="p-6 bg-white dark:bg-navy-card border border-slate-200 dark:border-slate-800 rounded-2xl hover-card-effect shadow-md flex flex-col items-center text-center group cursor-pointer print:border-black">
+          <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h4 class="font-bold text-sm text-black dark:text-white mb-2 group-hover:text-blue transition-colors">AWS Certified Solutions Architect – Associate</h4>
+          <p class="text-xs font-semibold text-slate-500 mt-auto">Feb 2026</p>
+          <span class="text-xs text-blue font-bold mt-3 opacity-0 group-hover:opacity-100 transition-opacity">View Credential &rarr;</span>
+        </a>
+
+        <!-- Google Cloud Engineer -->
+        <a href="https://www.credly.com/badges/c61386f5-7fc4-4a41-a83b-0ea580cfbc55/public_url" target="_blank" rel="noopener noreferrer" class="p-6 bg-white dark:bg-navy-card border border-slate-200 dark:border-slate-800 rounded-2xl hover-card-effect shadow-md flex flex-col items-center text-center group cursor-pointer print:border-black">
+          <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h4 class="font-bold text-sm text-black dark:text-white mb-2 group-hover:text-blue transition-colors">Google Associate Cloud Engineer</h4>
+          <p class="text-xs font-semibold text-slate-500 mt-auto">Jan 2026</p>
+          <span class="text-xs text-blue font-bold mt-3 opacity-0 group-hover:opacity-100 transition-opacity">View Credential &rarr;</span>
+        </a>
+
+        <!-- Azure Network Engineer -->
+        <a href="https://learn.microsoft.com/en-us/users/duvvavinaycognizant-4225/credentials/3ab0b7aae8733372?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer" class="p-6 bg-white dark:bg-navy-card border border-slate-200 dark:border-slate-800 rounded-2xl hover-card-effect shadow-md flex flex-col items-center text-center group cursor-pointer print:border-black">
+          <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h4 class="font-bold text-sm text-black dark:text-white mb-2 group-hover:text-blue transition-colors">Azure Network Engineer Associate (AZ-700)</h4>
+          <p class="text-xs font-semibold text-slate-500 mt-auto">Apr 2025</p>
+          <span class="text-xs text-blue font-bold mt-3 opacity-0 group-hover:opacity-100 transition-opacity">View Credential &rarr;</span>
+        </a>
+
+        <!-- Azure Fundamentals -->
+        <a href="https://learn.microsoft.com/en-us/users/duvvavinaycognizant-4225/credentials/6ce713890b5c749b?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer" class="p-6 bg-white dark:bg-navy-card border border-slate-200 dark:border-slate-800 rounded-2xl hover-card-effect shadow-md flex flex-col items-center text-center group cursor-pointer print:border-black">
+          <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h4 class="font-bold text-sm text-black dark:text-white mb-2 group-hover:text-blue transition-colors">Azure Fundamentals (AZ-900)</h4>
+          <p class="text-xs font-semibold text-slate-500 mt-auto">Mar 2025</p>
+          <span class="text-xs text-blue font-bold mt-3 opacity-0 group-hover:opacity-100 transition-opacity">View Credential &rarr;</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 scroll-mt-20 print-hidden">
+      <div class="max-w-4xl mx-auto bg-white dark:bg-navy-card p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800 relative overflow-hidden">
+        
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-light rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
+        
+        <h2 class="text-3xl font-bold mb-4 text-center text-black dark:text-white relative z-10">Let's Connect</h2>
+        <p class="text-center text-slate-600 dark:text-slate-400 mb-8 relative z-10">Looking for a reliable Cloud Support Engineer? Feel free to reach out via the form or email below.</p>
+
+        <!-- Direct Email -->
+        <div class="flex items-center justify-center mb-10 relative z-10">
+          <span class="text-sm font-semibold">Email: </span>
+          <a href="mailto:duvvavinaykumar@gmail.com" class="ml-2 text-blue font-bold hover:underline">duvvavinaykumar@gmail.com</a>
+          <button id="copy-email-btn" class="ml-3 p-1 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 transition-colors" aria-label="Copy Email">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          </button>
+          <span id="copy-toast" class="hidden ml-2 text-xs text-green-600 font-bold bg-green-100 px-2 py-1 rounded">Copied!</span>
+        </div>
+
+        <!-- Formspree Form -->
+        <!-- [REPLACE the action URL with your actual Formspree form ID] -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="space-y-6 relative z-10 max-w-2xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-bold mb-1 text-slate-700 dark:text-slate-300">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-50 dark:bg-navy border border-slate-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue transition-all">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-bold mb-1 text-slate-700 dark:text-slate-300">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-50 dark:bg-navy border border-slate-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue transition-all">
+            </div>
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-bold mb-1 text-slate-700 dark:text-slate-300">Subject</label>
+            <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-slate-50 dark:bg-navy border border-slate-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue transition-all">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-bold mb-1 text-slate-700 dark:text-slate-300">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-slate-50 dark:bg-navy border border-slate-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue transition-all"></textarea>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="resume_request" name="resume_request" class="w-5 h-5 text-blue bg-white border-slate-300 rounded focus:ring-blue dark:bg-navy dark:border-slate-600 cursor-pointer">
+            <label for="resume_request" class="ml-2 text-sm font-bold text-slate-700 dark:text-slate-300 cursor-pointer">Please send me a copy of your resume</label>
+          </div>
+          <button type="submit" class="w-full py-4 bg-blue text-white font-bold text-lg rounded-lg hover:bg-blue-dark transition-all shadow-md hover:shadow-blue/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue">
+            Send Message
+          </button>
+          
+          <div id="form-success" class="hidden p-4 bg-green-50 border-l-4 border-green-500 text-green-700 rounded shadow-sm text-sm font-semibold">
+            Message sent successfully! I'll get back to you soon.
+          </div>
+          <div id="form-error" class="hidden p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded shadow-sm text-sm font-semibold">
+            Oops! There was a problem submitting your form. Please try again.
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white dark:bg-navy-card py-8 border-t border-slate-200 dark:border-slate-800 text-center print-hidden">
+    <div class="flex justify-center gap-6 mb-4">
+      <a href="https://github.com/vinay1515" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue transition-colors">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/vinay-kumar-duvva/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue transition-colors">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+    </div>
+    <p class="text-sm text-slate-500 font-medium">&copy; 2026 Vinay Kumar Duvva. All rights reserved.</p>
+  </footer>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <dialog id="project-modal" class="bg-white dark:bg-navy-card text-black dark:text-white p-0 rounded-2xl shadow-2xl backdrop:bg-black-pure/70 max-w-3xl w-full mx-auto outline-none border border-slate-200 dark:border-slate-700 print-hidden">
+    <div class="p-8">
+      <div class="flex justify-between items-start mb-6 border-b border-slate-100 dark:border-slate-800 pb-4">
+        <h3 id="modal-title" class="text-2xl font-bold text-black dark:text-white">Project Title</h3>
+        <button id="modal-close" class="text-slate-400 hover:text-blue transition-colors focus:outline-none bg-slate-100 dark:bg-navy p-2 rounded-full" aria-label="Close modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      
+        <img id="modal-image" src="Assets/AWS Project.jpeg" alt="Project Screenshot" class="w-full h-full object-contain animate-image-fade-in">
+
+      <div id="modal-desc" class="mb-8 text-sm leading-relaxed"></div>
+
+      <div id="modal-tech" class="flex flex-wrap gap-2 mb-8"></div>
+
+      <div class="flex flex-wrap gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+          <a id="modal-repo" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-5 py-2.5 border-2 border-blue text-blue font-bold rounded-lg hover:bg-blue hover:text-white transition-colors focus:outline-none">GitHub Repo</a>
+          
+          <a id="modal-video" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-5 py-2.5 border-2 border-red-500 text-red-500 font-bold rounded-lg hover:bg-red-500 hover:text-white transition-colors focus:outline-none flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+              </svg> Watch Video
+          </a>
+          
+          <a id="modal-live" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-5 py-2.5 bg-blue text-white font-bold rounded-lg hover:bg-blue-dark transition-all shadow-md focus:outline-none">Live Demo</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- External JS File -->
+  <script src="script.js"></script>
+</body>
+</html>
