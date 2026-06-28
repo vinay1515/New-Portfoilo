@@ -111,6 +111,38 @@ document.addEventListener('DOMContentLoaded', () => {
           <li>Produced 5+ pages of technical documentation covering deployment procedures and incident runbooks.</li>
         </ul>
       `
+    },
+    'aws-handy-book': {
+      title: 'AWS Handy Book - Interactive Reference Guide',
+      image: 'Assets/AWS Project.jpeg',
+      desc: 'Interactive AWS reference guide built as a static website hosted on Amazon S3.',
+      tech: ['AWS S3', 'HTML', 'CSS', 'JavaScript'],
+      repo: 'https://github.com/vinay1515/Vinay_kumar_AWS_Beginner_level_projects',
+      live: 'https://aws-handy-book-reference-website.s3.ap-south-1.amazonaws.com/index.html',
+      video: '',
+      details: `
+        <ul class="list-disc pl-5 space-y-2 mt-4 text-slate-600 dark:text-slate-300 font-medium">
+          <li>Developed a responsive web interface to serve as an interactive reference for AWS services.</li>
+          <li>Hosted the static website securely and cost-effectively on an Amazon S3 bucket.</li>
+          <li>Configured S3 bucket policies for public read access while maintaining strict security best practices.</li>
+        </ul>
+      `
+    },
+    'aws-cloudshell': {
+      title: 'AWS CloudShell Commands - Interactive Explorer',
+      image: 'Assets/AWS Project.jpeg',
+      desc: 'An interactive explorer for AWS CloudShell commands, hosted on Amazon S3.',
+      tech: ['AWS S3', 'AWS CloudShell', 'HTML', 'CSS'],
+      repo: 'https://github.com/vinay1515/Vinay_kumar_AWS_Beginner_level_projects',
+      live: 'https://aws-cloudshell-commands-website.s3.ap-south-1.amazonaws.com/index.html',
+      video: '',
+      details: `
+        <ul class="list-disc pl-5 space-y-2 mt-4 text-slate-600 dark:text-slate-300 font-medium">
+          <li>Created a comprehensive guide and interactive explorer for frequently used AWS CloudShell CLI commands.</li>
+          <li>Deployed via S3 static website hosting, utilizing bucket policies to manage access permissions.</li>
+          <li>Enabled seamless access to AWS command references, improving efficiency for cloud administration tasks.</li>
+        </ul>
+      `
     }
   };
 
@@ -256,6 +288,65 @@ document.addEventListener('DOMContentLoaded', () => {
         copyToast.classList.remove('hidden');
         setTimeout(() => copyToast.classList.add('hidden'), 2000);
       });
+    });
+  }
+
+  // ==========================================
+  // 6. Scroll Reveal Observer
+  // ==========================================
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // ==========================================
+  // 7. Particles.js Configuration (Hero)
+  // ==========================================
+  if (window.particlesJS) {
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: ['#2563EB', '#60A5FA'] },
+        shape: { type: 'circle' },
+        opacity: { value: 0.4, random: false },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#60A5FA',
+          opacity: 0.3,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: 'none',
+          random: true,
+          straight: false,
+          out_mode: 'out',
+          bounce: false,
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: { enable: true, mode: 'grab' },
+          onclick: { enable: true, mode: 'push' },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 200, line_linked: { opacity: 0.8 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
     });
   }
 
