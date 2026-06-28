@@ -349,5 +349,42 @@ document.addEventListener('DOMContentLoaded', () => {
       retina_detect: true
     });
   }
+  // ==========================================
+  // 8. Typewriter Effect (Hero Subtitle)
+  // ==========================================
+  const typewriterText = "Cloud & Technical Support Engineer";
+  const typewriterEl = document.getElementById('typewriter-text');
+  if (typewriterEl) {
+    let i = 0;
+    const typeWriter = () => {
+      if (i < typewriterText.length) {
+        typewriterEl.innerHTML += typewriterText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    };
+    setTimeout(typeWriter, 500);
+  }
+
+  // ==========================================
+  // 9. Spotlight Glow Card Effect
+  // ==========================================
+  const glowCards = document.querySelectorAll('.glow-card');
+  glowCards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
+  // ==========================================
+  // 10. VanillaTilt Initialization
+  // ==========================================
+  if (window.VanillaTilt) {
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+  }
 
 });

@@ -56,6 +56,9 @@
 <body
   class="bg-white-off text-black dark:bg-navy dark:text-white transition-colors duration-300 selection:bg-blue selection:text-white">
 
+  <!-- Particle Background for entire page -->
+  <div id="particles-js" class="fixed inset-0 z-[-1] opacity-40 pointer-events-none"></div>
+
   <!-- Glassy Fixed Navigation -->
   <header
     class="fixed top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-navy/80 border-b border-slate-200 dark:border-slate-800 shadow-sm print-hidden transition-all duration-300">
@@ -123,13 +126,11 @@
 
     <!-- HERO SECTION -->
     <section class="py-12 md:py-20 flex flex-col-reverse md:flex-row items-center gap-12 relative scroll-reveal">
-      <div id="particles-js" class="absolute inset-0 z-0 opacity-50 pointer-events-none"></div>
       <div class="flex-1 text-center md:text-left relative z-10">
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 animate-fade-in-up anim-delay-1">
-          Hi, I'm <span class="text-blue">Vinay Kumar</span>
+          Hi, I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue to-purple-500 animate-gradient">Vinay Kumar</span>
         </h1>
-        <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 font-bold mb-4 animate-fade-in-up anim-delay-2">
-          Cloud &amp; Technical Support Engineer
+        <p id="typewriter-text" class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 font-bold mb-4 animate-fade-in-up anim-delay-2 h-8 md:h-10">
         </p>
         <p class="text-sm md:text-base text-blue font-bold mb-6 animate-fade-in-up anim-delay-3 bg-blue/10 inline-block px-4 py-2 rounded-lg">
           🚀 Aspiring Cloud Support Engineer | 🔖 2x Certified In AWS, GCP &amp; Azure | 🧩 Enhancing system reliability
@@ -263,10 +264,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div
-          class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black">
-          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2">Cloud &amp; IaC
+          class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black glow-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2 relative z-20">Cloud &amp; IaC
           </h3>
-          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
+          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium relative z-20">
             <span class="py-1">AWS (EC2, S3, VPC, IAM)</span>
             <span class="py-1">Azure (VNets, NSGs, VPN)</span>
             <span class="py-1">Google Cloud Platform</span>
@@ -276,10 +277,10 @@
         </div>
 
         <div
-          class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black">
-          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2">Containers &amp;
+          class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black glow-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2 relative z-20">Containers &amp;
             CI/CD</h3>
-          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
+          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium relative z-20">
             <span class="py-1">Docker</span>
             <span class="py-1">Kubernetes (GKE)</span>
             <span class="py-1">Helm Charts</span>
@@ -289,10 +290,10 @@
         </div>
 
         <div
-          class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black">
-          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2">Networking &amp;
+          class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black glow-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2 relative z-20">Networking &amp;
             Monitor</h3>
-          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
+          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium relative z-20">
             <span class="py-1">VPC, Subnetting, Routing</span>
             <span class="py-1">DNS, VPN, Firewalls</span>
             <span class="py-1">Stackdriver</span>
@@ -302,10 +303,10 @@
         </div>
 
         <div
-          class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black">
-          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2">OS &amp;
+          class="bg-white dark:bg-navy-card p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md hover-card-effect print:border-black glow-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+          <h3 class="font-bold text-lg mb-4 text-blue border-b border-slate-100 dark:border-slate-700 pb-2 relative z-20">OS &amp;
             Development</h3>
-          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium">
+          <div class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-300 font-medium relative z-20">
             <span class="py-1">Linux &amp; Windows Server</span>
             <span class="py-1">Python</span>
             <span class="py-1">Bash / Shell Scripting</span>
@@ -400,7 +401,7 @@
 
         <!-- Project 1: AWS -->
         <div
-          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid">
+          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid glow-card">
           <div class="h-2 w-full bg-orange-500"></div>
           <div class="p-6 flex flex-col flex-grow">
             <h3 class="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue transition-colors">AWS
@@ -441,7 +442,7 @@
 
         <!-- Project 2: Azure -->
         <div
-          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid">
+          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid glow-card">
           <div class="h-2 w-full bg-blue-light"></div>
           <div class="p-6 flex flex-col flex-grow">
             <h3 class="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue transition-colors">
@@ -482,7 +483,7 @@
 
         <!-- Project 3: GCP -->
         <div
-          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid">
+          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid glow-card">
           <div class="h-2 w-full bg-green-500"></div>
           <div class="p-6 flex flex-col flex-grow">
             <h3 class="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue transition-colors">GCP
@@ -521,7 +522,7 @@
 
         <!-- Project 4: AWS Handy Book -->
         <div
-          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid">
+          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid glow-card">
           <div class="h-2 w-full bg-orange-500"></div>
           <div class="p-6 flex flex-col flex-grow">
             <h3 class="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue transition-colors">AWS
@@ -543,7 +544,7 @@
 
         <!-- Project 5: AWS CloudShell -->
         <div
-          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid">
+          class="bg-white dark:bg-navy-card rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover-card-effect shadow-md flex flex-col print:break-inside-avoid glow-card">
           <div class="h-2 w-full bg-orange-500"></div>
           <div class="p-6 flex flex-col flex-grow">
             <h3 class="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-blue transition-colors">AWS
@@ -816,6 +817,8 @@
 
   <!-- Particles.js library -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Vanilla Tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   <!-- External JS File -->
   <script src="script.js"></script>
 </body>
